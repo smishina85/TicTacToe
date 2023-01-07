@@ -34,7 +34,8 @@ def main():
             break
 
         if step == 9:
-            print("Game is over.")
+            print("\nDraw in the game\n"
+                  "Game is over.")
             break
 
     print("\nThanks for playing")
@@ -85,14 +86,15 @@ def check_turn(step):
 
 
 def check_winner(a, mark):
-    return ((a[0][0] == a[0][1] == a[0][2] == mark) or
-            (a[1][0] == a[1][1] == a[1][2] == mark) or
-            (a[2][0] == a[2][1] == a[2][2] == mark) or
-            (a[0][0] == a[1][0] == a[2][0] == mark) or
-            (a[0][1] == a[1][1] == a[2][1] == mark) or
-            (a[0][2] == a[1][2] == a[2][2] == mark) or
-            (a[0][0] == a[1][1] == a[2][2] == mark) or
-            (a[0][2] == a[1][1] == a[0][2] == mark))
+    # print(a)
+    return (((a[0][0] == a[0][1] == a[0][2]) == mark) or
+            ((a[1][0] == a[1][1] == a[1][2]) == mark) or
+            ((a[2][0] == a[2][1] == a[2][2]) == mark) or
+            ((a[0][0] == a[1][0] == a[2][0]) == mark) or
+            ((a[0][1] == a[1][1] == a[2][1]) == mark) or
+            ((a[0][2] == a[1][2] == a[2][2]) == mark) or
+            ((a[0][0] == a[1][1] == a[2][2]) == mark) or
+            ((a[0][2] == a[1][1] == a[0][2]) == mark))
 
 
 if __name__ == '__main__':
